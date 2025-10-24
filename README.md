@@ -1,1 +1,2 @@
-# uscre
+# USC Review
+USC Review is a web application designed to facilitate the review process for academic papers submitted to conferences and journals. It provides a user-friendly interface for reviewers to evaluate submissions, provide feedback, and manage their review assignments.
