@@ -33,7 +33,7 @@ public class ShopController {
      */
     @GetMapping("/{id}")
     public Result queryShopById(@PathVariable("id") Long id) {
-        return Result.ok(shopService.getById(id));
+        return shopService.queryById(id);
     }
 
     /**
@@ -45,8 +45,7 @@ public class ShopController {
     public Result saveShop(@RequestBody Shop shop) {
         // 写入数据库
         shopService.save(shop);
-        // 返回店铺id
-        return Result.ok(shop.getId());
+        return Result.ok();
     }
 
     /**
@@ -57,8 +56,7 @@ public class ShopController {
     @PutMapping
     public Result updateShop(@RequestBody Shop shop) {
         // 写入数据库
-        shopService.updateById(shop);
-        return Result.ok();
+        return shopService.update(shop);
     }
 
     /**
@@ -70,14 +68,11 @@ public class ShopController {
     @GetMapping("/of/type")
     public Result queryShopByType(
             @RequestParam("typeId") Integer typeId,
-            @RequestParam(value = "current", defaultValue = "1") Integer current
+            @RequestParam(value = "current", defaultValue = "1") Integer current,
+            @RequestParam(value = "x",required = false) Double x,
+            @RequestParam(value = "y",required = false) Double y
     ) {
-        // 根据类型分页查询
-        Page<Shop> page = shopService.query()
-                .eq("type_id", typeId)
-                .page(new Page<>(current, SystemConstants.DEFAULT_PAGE_SIZE));
-        // 返回数据
-        return Result.ok(page.getRecords());
+        return shopService.queryShopByType(typeId,current,x,y);
     }
 
     /**
