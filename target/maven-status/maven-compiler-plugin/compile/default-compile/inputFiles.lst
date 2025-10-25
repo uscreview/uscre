@@ -35,6 +35,7 @@
 /home/wayne/workspace/repos/uscre/src/main/java/com/hmdp/service/IShopTypeService.java
 /home/wayne/workspace/repos/uscre/src/main/java/com/hmdp/entity/User.java
 /home/wayne/workspace/repos/uscre/src/main/java/com/hmdp/service/impl/ShopTypeServiceImpl.java
+/home/wayne/workspace/repos/uscre/src/main/java/com/hmdp/config/SecurityConfig.java
 /home/wayne/workspace/repos/uscre/src/main/java/com/hmdp/utils/RedisData.java
 /home/wayne/workspace/repos/uscre/src/main/java/com/hmdp/service/ISeckillVoucherService.java
 /home/wayne/workspace/repos/uscre/src/main/java/com/hmdp/interceptor/RefreshTokenInterceptor.java

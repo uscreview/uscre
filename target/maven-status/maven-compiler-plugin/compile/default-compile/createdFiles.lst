@@ -66,6 +66,7 @@ com/hmdp/controller/UploadController.class
 com/hmdp/service/IVoucherService.class
 com/hmdp/interceptor/RefreshTokenInterceptor.class
 com/hmdp/service/IFollowService.class
+com/hmdp/config/SecurityConfig.class
 com/hmdp/service/ISeckillVoucherService.class
 com/hmdp/HmDianPingApplication.class
 com/hmdp/mapper/SeckillVoucherMapper.class
